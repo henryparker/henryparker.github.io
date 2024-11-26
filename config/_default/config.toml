@@ -1,7 +1,28 @@
 # Change baseurl before deploy
 baseurl = "https://henryparker.github.io"
-languageCode = "en-us"
-title = "Hairui Yin's Blog"
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+[languages]
+    [languages.en]
+        contentDir = 'content'
+        languageName = "English"
+        disabled = false
+        languageCode = 'en'
+        languagedirection = "ltr"
+        title = "Hairui Yin's Blog"
+        weight = 1
+        [languages.en.params]
+            subtitle = "True happiness comes from belonging."
+    [languages.zh-cn]
+        contentDir = 'content/zh-cn'
+        languageName = "中文"
+        disabled = false
+        languageCode = 'zh-cn'
+        languagedirection = "ltr"
+        title = "米奇妙妙屋"
+        weight = 2
+        [languages.zh-cn.params]
+            subtitle = "享受学习，享受生活"
 
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar
@@ -9,7 +30,7 @@ defaultContentLanguage = "en"
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage = false
+hasCJKLanguage = true
 
 # Change it to your Disqus shortname before using
 disqusShortname = "Hairui Yin's Blog"
