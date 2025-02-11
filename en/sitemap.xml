@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://henryparker.github.io/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-11T01:31:26-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -15,14 +15,8 @@
                 href="https://henryparker.github.io/"
                 />
   </url><url>
-    <loc>https://henryparker.github.io/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://henryparker.github.io/page/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://henryparker.github.io/categories/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-11T01:31:26-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -33,6 +27,37 @@
                 hreflang="en"
                 href="https://henryparker.github.io/categories/"
                 />
+  </url><url>
+    <loc>https://henryparker.github.io/p/inverse-transform-sampling/</loc>
+    <lastmod>2025-02-11T01:31:26-05:00</lastmod>
+  </url><url>
+    <loc>https://henryparker.github.io/categories/monte-carlo-methods/</loc>
+    <lastmod>2025-02-11T01:31:26-05:00</lastmod>
+  </url><url>
+    <loc>https://henryparker.github.io/post/</loc>
+    <lastmod>2025-02-11T01:31:26-05:00</lastmod>
+  </url><url>
+    <loc>https://henryparker.github.io/tags/random-sampling/</loc>
+    <lastmod>2025-02-11T01:31:26-05:00</lastmod>
+  </url><url>
+    <loc>https://henryparker.github.io/tags/</loc>
+    <lastmod>2025-02-11T01:31:26-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://henryparker.github.io/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://henryparker.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://henryparker.github.io/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://henryparker.github.io/page/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://henryparker.github.io/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
@@ -46,24 +71,8 @@
     <loc>https://henryparker.github.io/p/markdown-syntax-guide/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://henryparker.github.io/post/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://henryparker.github.io/categories/syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://henryparker.github.io/tags/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://henryparker.github.io/zh-cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://henryparker.github.io/tags/"
-                />
   </url><url>
     <loc>https://henryparker.github.io/tags/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>

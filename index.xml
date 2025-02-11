@@ -7,7 +7,111 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Hairui Yin</copyright>
-        <lastBuildDate>Fri, 09 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://henryparker.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 11 Feb 2025 01:31:26 -0500</lastBuildDate><atom:link href="https://henryparker.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Inverse Transform Sampling</title>
+        <link>https://henryparker.github.io/p/inverse-transform-sampling/</link>
+        <pubDate>Tue, 11 Feb 2025 01:31:26 -0500</pubDate>
+        
+        <guid>https://henryparker.github.io/p/inverse-transform-sampling/</guid>
+        <description>&lt;img src="https://henryparker.github.io/p/inverse-transform-sampling/Cover.png" alt="Featured image of post Inverse Transform Sampling" /&gt;&lt;h2 id=&#34;background&#34;&gt;Background
+&lt;/h2&gt;&lt;p&gt;Inverse Transform Sampling is a fundamental technique in probability theory and statistics, allowing us to generate random numbers from any desired probability distribution, given its cumulative distribution function (CDF) and its inverse. This method is particularly useful when we have access to a uniform random number generator but need samples from a more complex distribution.&lt;/p&gt;
+&lt;h2 id=&#34;core-idea&#34;&gt;Core Idea
+&lt;/h2&gt;&lt;p&gt;Given a &lt;strong&gt;pseudorandom number generator&lt;/strong&gt; that produces numbers $u\sim U(0,1)$, our goal is to sample from a target distribution $D$. The key assumption here is that we can easily compute both the cdf $F$ of $D$ and its inverse $F^{-1}$. Since the cdf $F$ is a monotonically non-decreasing function and maps value from the domain of $D$ to the interval $[0,1]$, we can use the inverse cdf $F^{-1}$ to map a uniform random number $u$ back to a value in the domain of $D$. This process is visually illustrated below.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://henryparker.github.io/p/inverse-transform-sampling/1.png&#34;&gt;&lt;figcaption&gt;
+      &lt;h4&gt;Sample from \(N(3,1)\) using an inverse cdf&lt;/h4&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;step-by-step-process&#34;&gt;Step-by-Step Process
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Generate a Uniform Random Number&lt;/strong&gt;: Start by generating a random number $u\sim U(0,1)$.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Compute the Inverse CDF&lt;/strong&gt;: Determine the cdf of $F$ of the target distribution $D$ and compute its inverse $F^{-1}$.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Map to the Target Distribution&lt;/strong&gt;: Use the inverse cdf to map the uniform random number $u$ to a sample from $D$ by calculating $F^{-1}(u)$.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Repeat&lt;/strong&gt;: Repeat steps 1-3 until you have generated enough samples.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: For continuous distributions, each unique $u$ will map to a unique value in the domain of $D$. However, for discrete distributions, different $u$ values may map to the same value in the domain of $D$.&lt;/p&gt;
+&lt;h2 id=&#34;example-exponential-distribution&#34;&gt;Example: Exponential Distribution
+&lt;/h2&gt;&lt;p&gt;Let&amp;rsquo;s consider the exponential distribution, which is commonly used to model the time between events in a Poisson process.&lt;/p&gt;
+&lt;p&gt;The probability density function (PDF) of the exponential distribution is:&lt;/p&gt;
+$$Expon(x|\lambda)\triangleq \lambda e^{-\lambda x}$$&lt;p&gt;The corresponding CDF is:&lt;/p&gt;
+$$F(x)=1-e^{-\lambda x}$$&lt;p&gt;The inverse CDF (quantile function) is:&lt;/p&gt;
+$$F^{-1}(p)=-\frac{\ln{(1-p)}}{\lambda}$$&lt;p&gt;To generate samples from the exponential distribution, we can follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Generate a uniform random number $u\sim U(0,1)$.&lt;/li&gt;
+&lt;li&gt;Use the inverse CDF to map $u$ to a sample from the exponential distribution: $F^{-1}(u)\sim \text{Expon}(\lambda)$.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In fact, since $1-u\sim U(0,1)$, we can simplify the calculation to $-\ln{(u)}/\lambda$.&lt;/p&gt;
+&lt;h3 id=&#34;python-implementation&#34;&gt;Python Implementation
+&lt;/h3&gt;&lt;p&gt;Here’s how you can implement this in Python:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;random&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;seed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;42&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;parameter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# set lambda be 2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;U&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;random&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;random&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;U&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parameter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[0.23463404 1.50506072 0.65837285 0.45647128 0.08481244 0.08479815
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 0.02991938 1.00561543 0.45954108 0.61562503]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To verify the correctness of our samples, we can check the mean of the generated samples, which should approximate the multiplicative inverse of $\lambda$.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;0.5134850389506606
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;math-proof&#34;&gt;Math Proof
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; If $u\sim U(0,1)$ is a uniform r.v., then $F^{-1}(U)\sim F$.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt;&lt;/p&gt;
+\[
+\begin{align*}
+Pr(F^{-1}(U)\leq x)&amp;=Pr(U\leq F(x))\\
+&amp;=F(x)\ (\text{because } Pr(U\leq y)=y)
+\end{align*}
+\]&lt;h2 id=&#34;limitations-of-inverse-transform-sampling&#34;&gt;Limitations of Inverse Transform Sampling
+&lt;/h2&gt;&lt;p&gt;While Inverse Transform Sampling is a powerful method, it has some limitations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Complexity of the Inverse CDF&lt;/strong&gt;: The method relies on the ability to compute the inverse of the CDF. For many distributions, such as the normal or Weibull distributions, the CDF does not have a simple closed-form expression, making it difficult to compute the inverse. In such cases, numerical methods or approximations are required, which can increase computational complexity.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scalability in High Dimensions&lt;/strong&gt;: Inverse Transform Sampling is not well-suited for high-dimensional problems. As the dimensionality increases, handling the marginal distributions and their dependencies becomes increasingly complex, making this method less practical.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Independence Assumption&lt;/strong&gt;: This method assumes that the random variables are independent. For correlated variables, other techniques like Markov Chain Monte Carlo (MCMC) or Accept-Reject Sampling are more appropriate.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Reference: &amp;lsquo;Probabilistic Machine Learning: Advanced Topics&amp;rsquo;, Kevin Patrick Murphy, Page 486-487&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>Archives</title>
         <link>https://henryparker.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
