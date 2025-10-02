@@ -1,12 +1,11 @@
 ---
 permalink: /
+title: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-## About me
-
 Hi! I’m a Master’s student in Data Science at the University of Maryland, College Park. I work on visual representation learning, generative modeling, and robot perception at the intersection of computer vision and robotics. My long-term goal is to enable machines to understand and act in the physical world through vision.
 
 ## Education
