@@ -53,7 +53,7 @@ redirect_from:
     <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/umd.png" /></div></td>
     <td class="pub_td2"><b>University of Maryland, College Park</b><br />
             <div class="paper_metadata">
-            Master's student in Data Science (MSDS)
+            Master's student in Data Science
             </div>
             <div class="paper_metadata">
                 Aug. 2024 - Expected May. 2026
@@ -87,10 +87,15 @@ redirect_from:
 
 ## Research Experience
 
+- **Egocentric: First-person AR scene world model** *(08/2025 – Present)*
+  *Collaborator · Advised by Jiaben Chen, Meta*
+  - Extending EgoGen with hand–object interaction for first-person AR video generation.
+  - Designed and implementing an egocentric Blender, Unreal data pipeline with automated Synthesis。
+
 - **Physics-based Motion Video Generation** *(08/2025 – Present)*  
   *Intern · Advised by Prof. Chuang Gan, UMass Amherst*  
-  - Extending physics-based humanoid control frameworks (InterMimic, PHC) for motion video synthesis.  
-  - Constructed novel dataset for video-motion integration.
+  - Extending physics-based humanoid control frameworks (InterMimic, PHC) in human-object interaction for motion video generation.  
+  - Constructed novel dataset for video-motion integration with Unreal5 using Bedlam framework.
 
 - **Structural Causal Model based Diffusion** *(03/2025 – Present)*  
   *Advised by Prof. Abdirisak Mohamed, University of Maryland*  
@@ -109,10 +114,8 @@ redirect_from:
 ## Professional Experience
 
 - **Assistant Data Engineer · Glodon, Shanghai** *(01/2024 – 07/2024)*  
-  - Enhanced CV-based safety monitoring with YOLO and Faster R-CNN, improving real-time detection accuracy to ≈94%.  
-  - Optimized data pipelines, boosting fine-tuned model accuracy by 10%.  
-  - Developed scalable synthetic data pipeline with Blender, 3D models, and OpenCV.
+  - Enhanced CV-based safety monitoring with YOLO and Faster R-CNN.  
+  - Developed scalable synthetic data pipeline with Blender, 3D cloud models, and OpenCV.
 
 - **Security Engineer Intern · NSFOCUS, Shanghai** *(06/2022 – 08/2022)*  
-  - Implemented secure data validation and preprocessing against SQL injection risks.  
-  - Developed encryption and hashing-based protocols for secure storage and transmission.
+  - Realized security data verification and communication inspection. 
