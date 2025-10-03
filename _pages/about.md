@@ -25,6 +25,8 @@ redirect_from:
 	table.pub_table {
 		width: 100%;
 		font-size: 12pt;
+    border-collapse: separate;
+    border-spacing: 0 12px;
 	}
 	td.pub_td1 {
 		width: 19%;
@@ -55,7 +57,6 @@ redirect_from:
                 Aug. 2024 - Expected May. 2026
             </div>
     </td></tr>
-    <tr><td class="pub_td1"></td><td class="pub_td2"></td></tr>
     
 <tr>
   <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/uw.png" /></div></td>
@@ -67,7 +68,6 @@ redirect_from:
             Jan. 2023 - Jun. 2023
         </div>
 </td></tr>
-<tr><td class="pub_td1"></td><td class="pub_td2"></td></tr>
 
 <tr>
     <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/shtech.jpeg" /></div></td>
@@ -79,7 +79,6 @@ redirect_from:
             Sep. 2020 - Jun. 2024
           </div>
   </td></tr>
-  <tr><td class="pub_td1"></td><td class="pub_td2"></td></tr>
 
 </table>
 
