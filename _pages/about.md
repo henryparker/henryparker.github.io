@@ -12,19 +12,52 @@ redirect_from:
 
 📖 Recently, I am working on 3D video scene generation, robot simulation, aerial manipulation, and image generation control using counterfactual methods.
 
-🎯 My short-term goal (next 12 months) is to grow into a reliable and qualified researcher and obtain a PhD position for Fall 2026; My medium-term goal (2 ~ 3 years) is to publish some interesting, high-impact works and collaborate with many outstanding researchers; My long-term goal is to enable machines to understand and reason the causal relation in the physical world through vision and physics-aware intelligence.
-
-## Education
-
-- **University of Maryland, College Park** *(09/2024 – 05/2026)*  
-  M.S. in Data Science · GPA: **4.00/4.00**
-- **University of Wisconsin, Madison** *(01/2023 – 07/2023)*  
-  Exchange in Computer Science · GPA: **3.80/4.00**
-- **Shanghaitech University** *(09/2020 – 06/2024)*  
-  B.Eng. in Computer Science and Technology · GPA: **3.53/4.00**
+🎯 My short-term goal (next 12 months) is to grow into a reliable and qualified researcher and obtain a PhD position for Fall 2026; My medium-term goal (2 ~ 3 years) is to publish some interesting, high-impact works and collaborate with many outstanding researchers; My long-term goal is to enable machines to understand and reason the causal relation in the physical world through vision, prior knowledge and physics-aware intelligence.
 
 
-## Research Experience
+<h1 id="education">Education</h1>
+
+<table class="pub_table">
+<tr>
+    <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/umd.png" /></div></td>
+    <td class="pub_td2"><b>University of Maryland, College Park</b><br />
+            <div class="paper_metadata">
+            Master's student in Data Science (MSDS)
+            </div>
+            <div class="paper_metadata">
+                Aug. 2024 - Expected May. 2026
+            </div>
+    </td></tr>
+    <tr><td class="pub_td1"></td><td class="pub_td2"></td></tr>
+    
+<tr>
+  <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/uw.png" /></div></td>
+  <td class="pub_td2"><b>University of Wisconsin, Madison</b><br />
+		    <div class="paper_metadata">
+        Exchange student in Computer Science
+        </div>
+        <div class="paper_metadata">
+            Jan. 2023 - Jun. 2023
+        </div>
+</td></tr>
+<tr><td class="pub_td1"></td><td class="pub_td2"></td></tr>
+
+<tr>
+    <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/shtech.jpeg" /></div></td>
+    <td class="pub_td2"><b>ShanghaiTech University</b><br />
+          <div class="paper_metadata">
+            Bachelor in Computer Science
+          </div>
+          <div class="paper_metadata">
+            Sep. 2020 - Jun. 2024
+          </div>
+  </td></tr>
+  <tr><td class="pub_td1"></td><td class="pub_td2"></td></tr>
+
+</table>
+
+
+<h1 id="research">Research Experience</h1>
 
 - **Physics-based Motion Video Generation** *(08/2025 – Present)*  
   *Intern · Advised by Prof. Chuang Gan, UMass Amherst*  
@@ -45,8 +78,7 @@ redirect_from:
   - Built a large-scale genealogy multimodal dataset (2.8TB) for sociological analysis.  
   - Applied OCR, Vision Models, and LLMs to analyze historical demographic patterns.
 
-
-## Professional Experience
+<h1 id="professional">Professional Experience</h1>
 
 - **Assistant Data Engineer · Glodon, Shanghai** *(01/2024 – 07/2024)*  
   - Enhanced CV-based safety monitoring with YOLO and Faster R-CNN, improving real-time detection accuracy to ≈94%.  
