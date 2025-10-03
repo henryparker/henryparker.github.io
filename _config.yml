@@ -22,7 +22,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "wtf.jpg"
+  avatar           : "me.jpg"
   name             : "Hairui Yin (印海睿)"
   pronouns         : # example: "she/her"  
   bio              : "The shortest route is the detour. It was the detour that was our shortest path."
