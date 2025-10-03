@@ -1,12 +1,18 @@
 ---
 permalink: /
-title: "About me"
+title: "👋 Hello there, I'm Hairui (海睿)"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-Hi! I’m a Master’s student in Data Science at the University of Maryland, College Park. I work on visual representation learning, generative modeling, and robot perception at the intersection of computer vision and robotics. My long-term goal is to enable machines to understand and act in the physical world through vision.
+👨‍🔬 Hi! I’m a second year graduate student at UMD College Park. 
+
+🔬 My research interests are bridging vision, language and the real world.
+
+📖 Recently, I am working on 3D video scene generation, robot simulation, aerial manipulation, and image generation control using counterfactual methods.
+
+🎯 My short-term goal (next 12 months) is to grow into a reliable and qualified researcher and obtain a PhD position for Fall 2026; My medium-term goal (2 ~ 3 years) is to publish some interesting, high-impact works and collaborate with many outstanding researchers; My long-term goal is to enable machines to understand and reason the causal relation in the physical world through vision and physics-aware intelligence.
 
 ## Education
 
