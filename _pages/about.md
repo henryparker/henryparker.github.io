@@ -42,6 +42,8 @@ redirect_from:
 		font-weight: bold;
 		color: red;
 	}
+  .teaser_img_div { width:140px; height:84px; display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:8px; }
+  .teaser_img { max-width:100%; max-height:100%; object-fit: contain; display:block; }
 </style>
 
 ## Education
