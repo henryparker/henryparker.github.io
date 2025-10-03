@@ -14,8 +14,35 @@ redirect_from:
 
 🎯 My short-term goal (next 12 months) is to grow into a reliable and qualified researcher and obtain a PhD position for Fall 2026; My medium-term goal (2 ~ 3 years) is to publish some interesting, high-impact works and collaborate with many outstanding researchers; My long-term goal is to enable machines to understand and reason the causal relation in the physical world through vision, prior knowledge and physics-aware intelligence.
 
+<style type="text/css">
+	.paper_metadata a {
+		text-decoration: none!important;
+		color: #494e52;
+	}
+	table, th, td {
+		border: 0px solid black;
+	}
+	table.pub_table {
+		width: 100%;
+		font-size: 12pt;
+	}
+	td.pub_td1 {
+		width: 19%;
+	}
+	td.pub_td2 {
+		width: 67%;
+	}
+	span.subbullet {
+		font-size: 11pt;
+		margin-left: 20px
+	}
+	oral {
+		font-weight: bold;
+		color: red;
+	}
+</style>
 
-<h1 id="education">Education</h1>
+## Education
 
 <table class="pub_table">
 <tr>
@@ -57,7 +84,7 @@ redirect_from:
 </table>
 
 
-<h1 id="research">Research Experience</h1>
+## Research Experience
 
 - **Physics-based Motion Video Generation** *(08/2025 – Present)*  
   *Intern · Advised by Prof. Chuang Gan, UMass Amherst*  
@@ -78,7 +105,7 @@ redirect_from:
   - Built a large-scale genealogy multimodal dataset (2.8TB) for sociological analysis.  
   - Applied OCR, Vision Models, and LLMs to analyze historical demographic patterns.
 
-<h1 id="professional">Professional Experience</h1>
+## Professional Experience
 
 - **Assistant Data Engineer · Glodon, Shanghai** *(01/2024 – 07/2024)*  
   - Enhanced CV-based safety monitoring with YOLO and Faster R-CNN, improving real-time detection accuracy to ≈94%.  
