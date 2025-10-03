@@ -1,0 +1,54 @@
+/* 整体表格：去掉用空 <tr> 撑间距的需求 */
+.pub_table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;  /* 每行间距 */
+}
+
+/* 左列：固定列宽，顶对齐，给右列留空间 */
+.pub_td1 {
+  width: 108px;            /* 依据你的 logo 盒子尺寸留一点富余 */
+  vertical-align: top;
+  padding-right: 12px;
+}
+
+/* 右列：正常顶对齐 */
+.pub_td2 {
+  vertical-align: top;
+}
+
+/* 校徽外层盒子：固定方形，居中放置，防止各家比例不同导致跳动 */
+.teaser_img_div {
+  width: 84px;             /* 统一“显示盒子”的宽高 */
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;        /* 防溢出 */
+  border-radius: 8px;      /* 可选：圆角 */
+  background: transparent; /* 可选：有些透明 PNG 看起来更舒服 */
+}
+
+/* 图片本体：不拉伸，按比例缩放到盒子里 */
+.teaser_img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;     /* 适配不同纵横比（不会被拉伸/压扁） */
+  display: block;
+}
+
+/* 小屏优化 */
+@media (max-width: 480px) {
+  .teaser_img_div { width: 72px; height: 72px; }
+  .pub_td1 { width: 96px; }
+}
+
+/* 可选：图片加载前先占位，避免跳动 */
+.teaser_img_div::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+}
