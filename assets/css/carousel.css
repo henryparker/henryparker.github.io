@@ -46,6 +46,23 @@ body {
   height: 100%;
 }
 
+#carouselExampleCaptions .carousel-item { position: relative; }
+#carouselExampleCaptions .carousel-item::before{
+  content:"";
+  position:absolute; inset:0;
+  /* 底部更暗、向上渐隐；可把 0.55/0.25 调暗/调亮 */
+  background: linear-gradient(to top,
+              rgba(0,0,0,.55) 0%,
+              rgba(0,0,0,.25) 35%,
+              rgba(0,0,0,0) 60%);
+  pointer-events:none;
+  z-index:1;
+}
+#carouselExampleCaptions .carousel-caption{
+  z-index:2;                 /* 盖在遮罩之上 */
+  text-shadow: 0 2px 8px rgba(0,0,0,.9);
+}
+
 /* 图片占满容器且不变形（留边/不裁剪：contain；想铺满可改 cover） */
 #carouselExampleCaptions .carousel-item > img {
   position: absolute;         /* 你原来就有的定位方式 */
