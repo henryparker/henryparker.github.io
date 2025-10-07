@@ -187,7 +187,7 @@ redirect_from:
 - **Egocentric: First-person AR scene world model** *(08/2025 – Present)*
   *Intern · Advised by Prof. Chuang Gan, Mentored by Jiaben Chen, UMass Amherst*
   - Extending EgoGen with hand–object interaction for first-person AR video generation.
-  - Designed and implementing an egocentric Blender, Unreal data pipeline with automated Synthesis。
+  - Designed and implementing an egocentric Blender, Unreal data pipeline with automated Synthesis.
 
 - **Physics-based Motion Video Generation** *(07/2025 – Present)*  
   *Intern · Advised by Prof. Chuang Gan, Mentored by Jiaben Chen, UMass Amherst*  
