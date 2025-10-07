@@ -185,12 +185,12 @@ redirect_from:
 ### Research Experience
 
 - **Egocentric: First-person AR scene world model** *(08/2025 – Present)*
-  *Collaborator · Advised by Jiaben Chen, Meta*
+  *Intern · Advised by Prof. Chuang Gan, Mentored by Jiaben Chen, UMass Amherst*
   - Extending EgoGen with hand–object interaction for first-person AR video generation.
   - Designed and implementing an egocentric Blender, Unreal data pipeline with automated Synthesis。
 
 - **Physics-based Motion Video Generation** *(08/2025 – Present)*  
-  *Intern · Advised by Prof. Chuang Gan, UMass Amherst*  
+  *Intern · Advised by Prof. Chuang Gan, Mentored by Jiaben Chen, UMass Amherst*  
   - Extending physics-based humanoid control frameworks (InterMimic, PHC) in human-object interaction for motion video generation.  
   - Constructed novel dataset for video-motion integration with Unreal5 using Bedlam framework.
 
@@ -216,6 +216,8 @@ redirect_from:
 
 - **Security Engineer Intern · NSFOCUS, Shanghai** *(06/2022 – 08/2022)*  
   - Realized security data verification and communication inspection. 
+
+
 
 #### Other things about me (🚫 Research)
 
