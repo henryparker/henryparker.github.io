@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-👨‍🔬 Hi! I’m a second year graduate student at UMD College Park, advised by [Dr. Abdirisak Mohamed](https://www.linkedin.com/in/abdirisak-mohamed-0524981a/). I'm also an intern advised by [Prof. Chuang Gan](https://people.csail.mit.edu/ganchuang/), phd [Jiaben Chen](https://jiabenchen.github.io/) at UMass Amherst. Before graduate study, I received my bachelor's degree in Computer Science and Technology at [SIST](http://sist.shanghaitech.edu.cn/) of [ShanghaiTech University](https://www.shanghaitech.edu.cn/eng/). During my junior and senior years,  I had the privilege of working with [Prof. Haipeng Zhang](https://faculty.sist.shanghaitech.edu.cn/zhanghp/).
+👨‍🔬 Hi! I’m a second year graduate student at UMD College Park, advised by [Dr. Abdirisak Mohamed](https://www.linkedin.com/in/abdirisak-mohamed-0524981a/). I'm also an intern advised by [Prof. Chuang Gan](https://people.csail.mit.edu/ganchuang/), PhD student [Jiaben Chen](https://jiabenchen.github.io/) at UMass Amherst. Before graduate study, I received my bachelor's degree in Computer Science and Technology at [SIST](http://sist.shanghaitech.edu.cn/) of [ShanghaiTech University](https://www.shanghaitech.edu.cn/eng/). During my junior and senior years,  I had the privilege of working with [Prof. Haipeng Zhang](https://faculty.sist.shanghaitech.edu.cn/zhanghp/).
 
 🔬 My research interests are bridging vision, language and the real world.
 
@@ -189,7 +189,7 @@ redirect_from:
   - Extending EgoGen with hand–object interaction for first-person AR video generation.
   - Designed and implementing an egocentric Blender, Unreal data pipeline with automated Synthesis。
 
-- **Physics-based Motion Video Generation** *(08/2025 – Present)*  
+- **Physics-based Motion Video Generation** *(07/2025 – Present)*  
   *Intern · Advised by Prof. Chuang Gan, Mentored by Jiaben Chen, UMass Amherst*  
   - Extending physics-based humanoid control frameworks (InterMimic, PHC) in human-object interaction for motion video generation.  
   - Constructed novel dataset for video-motion integration with Unreal5 using Bedlam framework.
