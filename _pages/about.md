@@ -72,7 +72,7 @@ redirect_from:
         <source src="images/geo.mp4" type="video/mp4">
       </video>
       <div class="carousel-caption d-none d-md-block">
-        <h5>2025</h5>
+        <h5>2025 (still working on)</h5>
         <p>Egocentric: First-person AR scene world model</p>
       </div>
     </div>
@@ -81,7 +81,7 @@ redirect_from:
         <source src="images/Human_object.mp4" type="video/mp4">
       </video>
       <div class="carousel-caption d-none d-md-block">
-        <h5>2025</h5>
+        <h5>2025 (still working on)</h5>
         <p>Physics-based Motion Video Generation</p>
       </div>
     </div>
