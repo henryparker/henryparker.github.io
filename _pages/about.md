@@ -143,7 +143,7 @@ redirect_from:
 
 
 
-## Education
+### Education
 
 <table class="pub_table">
 <tr>
@@ -182,7 +182,7 @@ redirect_from:
 </table>
 
 
-## Research Experience
+### Research Experience
 
 - **Egocentric: First-person AR scene world model** *(08/2025 – Present)*
   *Collaborator · Advised by Jiaben Chen, Meta*
@@ -208,7 +208,7 @@ redirect_from:
   - Built a large-scale genealogy multimodal dataset (2.8TB) for sociological analysis.  
   - Applied OCR, Vision Models, and LLMs to analyze historical demographic patterns.
 
-## Professional Experience
+### Professional Experience
 
 - **Assistant Data Engineer · Glodon, Shanghai** *(01/2024 – 07/2024)*  
   - Enhanced CV-based safety monitoring with YOLO and Faster R-CNN.  
@@ -216,3 +216,11 @@ redirect_from:
 
 - **Security Engineer Intern · NSFOCUS, Shanghai** *(06/2022 – 08/2022)*  
   - Realized security data verification and communication inspection. 
+
+#### Other things about me (🚫 Research)
+
+- I love teaching, and I am currently working as a TA for course 'Decision Making for information science' at UMD.
+
+- I love sports🏸🏓🎾. Though not playing 🏀 right now, I was a basketball athlete in my teenage years. At that time, I also won first prize in the 1500-meter long-distance race in Changning district, Shanghai.
+
+- 🎤 in choirs in primary school, high school and undergrate university.
